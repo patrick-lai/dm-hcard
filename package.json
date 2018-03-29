@@ -1,0 +1,33 @@
+{
+  "name": "dm-spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "test": "PORT=9090 echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon -x 'npm run start'",
+    "watch:test": "PORT=9090 jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "~6.26.0",
+    "babel-preset-env": "~1.6.1",
+    "babel-preset-react": "~6.24.1",
+    "babel-preset-stage-2": "~6.24.1",
+    "dotenv": "~5.0.1",
+    "express": "~4.16.3",
+    "mustache": "~2.3.0",
+    "mustache-express": "~1.2.5",
+    "react": "~15.6.0",
+    "react-dom": "~15.6.0"
+  },
+  "devDependencies": {
+    "babel-jest": "~22.4.3",
+    "jest": "~22.4.2",
+    "nodemon": "~1.17.2",
+    "supertest-session": "~3.1.2"
+  }
+}
