@@ -1,3 +1,19 @@
+### Usage
+
+* Set `SESSION_SECRET` in your environment.
+* Run `npm start`
+
+### Development
+
+* Step 1) `npm i`
+* Step 2) Copy `.env.example` into `.env`
+* Step 3) `npm run watch` for live reload
+
+### Testing
+
+* `npm run test` - Runs tests once and generates coverage report
+* `npm run watch:test` - Live reload tests (does not update report)
+
 ### Journal
 
 **Step 1) brain storm the problem**
