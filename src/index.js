@@ -44,8 +44,13 @@ app.post('/submit', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  // NOTE - renderToNodeStream is available in react-dom v16?
-  res.render('template', { html: renderToString(<HCard {...req.query} />) });
+  const hCardProps = {};
+
+  // NOTE - renderToNodeStream is available in react-dom v16
+  res.render('template', {
+    hCardProps: JSON.stringify(hCardProps),
+    html: renderToString(<HCard {...req.query} />)
+  });
 });
 
 export default app.listen(PORT, () => {

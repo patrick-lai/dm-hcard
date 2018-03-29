@@ -17,8 +17,16 @@
     <script src="main.js"></script>
     <script>
       (function() {
+        var hCardProps = {{{hCardProps}}}
+
         // NOTE - ReactDom v16 use ReactDom.hydrate()
-        ReactDOM.render();
+        ReactDOM.render(
+          React.createElement(
+            window.hCard.default,
+            hCardProps
+          ),
+          document.querySelector('.HcardApp')
+        );
       })();
     </script>
   </body>
