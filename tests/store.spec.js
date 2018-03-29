@@ -20,7 +20,7 @@ describe('Mock store', () => {
     expect(await store.get(key)).toEqual({});
     await store.set(key, value);
     expect(await store.get(key)).toEqual(value);
-    await store.update(key, { b: 'b' });
+    await store.save(key, { b: 'b' });
     expect(await store.get(key)).toEqual({ a: 'a', b: 'b' });
     done();
   });

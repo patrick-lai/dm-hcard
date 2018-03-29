@@ -39,7 +39,7 @@ app.use('/', express.static('assets'));
 app.post('/update', validations.update, async (req, res) => {
   try {
     // TODO - replace STATIC_SESSION_ID with req.session.id
-    await store.update(STATIC_SESSION_ID, req.body);
+    await store.save(STATIC_SESSION_ID, req.body);
     res.end();
   } catch (e) {
     next(e);

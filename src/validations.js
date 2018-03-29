@@ -4,6 +4,7 @@
 
 import _ from 'lodash';
 import logger from './logger';
+
 export default {
   update: (req, res, next) => {
     const { body } = req;
@@ -14,6 +15,7 @@ export default {
       );
       return;
     }
+    // TODO - add more validations like name,phone etc etc
     next();
   },
   submit: (req, res, next) => {
@@ -25,6 +27,7 @@ export default {
       );
       return;
     }
+    // TODO - add more validations like name,phone etc etc
     next();
   }
 };
