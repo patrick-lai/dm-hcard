@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Live hCard Preview</title>
+
     <link href="css/bootstrap.min.css" rel="stylesheet" >
     <link href="css/main.css" rel="stylesheet">
   </head>
+
   <body>
-    <div id="app">{{{html}}}</div>
+    <div class="HcardApp" >{{{html}}}</div>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="main.js"></script>
+    <script>
+      (function() {
+        // NOTE - ReactDom v16 use ReactDom.hydrate()
+        ReactDOM.render();
+      })();
+    </script>
   </body>
 </html>

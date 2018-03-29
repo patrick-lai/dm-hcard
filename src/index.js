@@ -33,8 +33,7 @@ app.use(
 );
 
 // Serves css and img assets
-app.use('/css', express.static('assets/css'));
-app.use('/img', express.static('assets/img'));
+app.use('/', express.static('assets'));
 
 app.post('/update', (req, res) => {
   console.log('UPDATE', req.session);
@@ -45,6 +44,7 @@ app.post('/submit', (req, res) => {
 });
 
 app.get('/', (req, res) => {
+  // NOTE - renderToNodeStream is available in react-dom v16?
   res.render('template', { html: renderToString(<HCard {...req.query} />) });
 });
 
