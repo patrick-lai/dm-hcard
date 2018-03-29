@@ -74,5 +74,7 @@ app.get('/', async (req, res) => {
 app.use(errorHandler);
 
 export default app.listen(PORT, () => {
-  logger.trace(`Application served on port ${PORT}`);
+  logger.trace(
+    `\n\nApplication served on port ${PORT}.\nGo to https://localhost:${PORT}/ to see the Hcard`
+  );
 });

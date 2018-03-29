@@ -7,7 +7,7 @@
 
 * Step 1) `npm i`
 * Step 2) Copy `.env.example` into `.env`
-* Step 3) `npm run watch` for live reload
+* Step 3) `npm start` to start or `npm run watch` for live reload
 
 ### Testing
 
