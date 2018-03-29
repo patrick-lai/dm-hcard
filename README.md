@@ -41,3 +41,5 @@
 **Step 4) Build**
 
 * 1st Session ~ 1.5 hours
+* 2nd Session ~ 2 hours
+* 3rd Session ~ (fixing a problem with session not persisting)

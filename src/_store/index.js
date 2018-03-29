@@ -8,12 +8,12 @@
 class Store {
   _store = new Map();
 
-  // Expose some methods;
-  get = key => this._store.get(key);
-  set = (key, value) => this._store.set(key, value);
-  update = (key, delta) => {
-    const original = this.get(key) || {};
-    this.set(key, { ...original, ...delta });
+  // NOTE - make these async as they are like to be in reality
+  get = key => Promise.resolve(this._store.get(key) || {});
+  set = (key, value) => Promise.resolve(this._store.set(key, value));
+  update = async (key, delta) => {
+    const original = (await this.get(key)) || {};
+    return this.set(key, { ...original, ...delta });
   };
 }
 

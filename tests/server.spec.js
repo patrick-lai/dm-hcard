@@ -40,12 +40,53 @@ describe('Hcard server', () => {
     const params =
       'givenName=Sam&surname=Fairfax&email=sam.fairfax%40fairfaxmedia.com.au&phone=0292822833&houseNumber=100&street=Harris+Street&suburb=Pyrmont&state=NSW&postcode=2009&country=Australia';
     const res = await session.get('?' + params);
-    expect(res.status).toBe(200);
     expect(res.text).toMatchSnapshot();
     done();
   });
 
-  xit('Should be able to update', () => {});
-  xit('Should be able to submit', () => {});
-  xit('Should be able to persist session data during reload', () => {});
+  it('Should be able to update and persist data on reload', async done => {
+    const params = 'givenName=Patrick';
+    const res = await session.get('?' + params);
+    expect(res.status).toBe(200);
+    expect(res.text).toMatchSnapshot();
+
+    // Update email
+    await session.post('/update').send({ email: 'first.email@gmail.com' });
+    const res2 = await session.get('/');
+    expect(res2.text).toMatchSnapshot();
+
+    // Override email
+    await session.post('/update').send({ email: 'second.email@gmail.com' });
+    const res3 = await session.get('/');
+    expect(res3.text).toMatchSnapshot();
+    done();
+  });
+
+  it('Should be able to submit and persist data on reload', async done => {
+    const params = 'givenName=Patrick';
+    const res = await session.get('?' + params);
+    expect(res.text).toMatchSnapshot();
+
+    // Update email
+    await session.post('/update').send({ email: 'first.email@gmail.com' });
+    const res2 = await session.get('/');
+    expect(res2.text).toMatchSnapshot();
+
+    // Submit
+    await session.post('/update').send({
+      givenName: 'Sam',
+      surname: 'Fairfax',
+      email: 'sam.fairfax@fairfaxmedia.com.au',
+      phone: '0292822833',
+      houseNumber: '100',
+      street: 'Harris Street',
+      suburb: 'Pyrmont',
+      state: 'NSW',
+      postcode: '2009',
+      country: 'Australia'
+    });
+    const res3 = await session.get('/');
+    expect(res3.text).toMatchSnapshot();
+    done();
+  });
 });

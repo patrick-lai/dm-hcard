@@ -5,21 +5,23 @@
 import store from '../src/_store';
 
 describe('Mock store', () => {
-  it('Should be able to set and get something', () => {
+  it('Should be able to set and get something', async done => {
     const key = 'key';
     const value = 'value';
-    expect(store.get(key)).toBe(undefined);
-    store.set(key, value);
-    expect(store.get(key)).toEqual(value);
+    expect(await store.get(key)).toEqual({});
+    await store.set(key, value);
+    expect(await store.get(key)).toEqual(value);
+    done();
   });
 
-  it('Should be able to patch a value via update method', () => {
+  it('Should be able to patch a value via update method', async done => {
     const key = 'key2';
     const value = { a: 'a' };
-    expect(store.get(key)).toBe(undefined);
-    store.set(key, value);
-    expect(store.get(key)).toEqual(value);
-    store.update(key, { b: 'b' });
-    expect(store.get(key)).toEqual({ a: 'a', b: 'b' });
+    expect(await store.get(key)).toEqual({});
+    await store.set(key, value);
+    expect(await store.get(key)).toEqual(value);
+    await store.update(key, { b: 'b' });
+    expect(await store.get(key)).toEqual({ a: 'a', b: 'b' });
+    done();
   });
 });
