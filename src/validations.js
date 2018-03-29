@@ -1,5 +1,6 @@
 /***
  * Validation on routes
+ * With more routes this will have to expand into a cleaner structure but for now its good enough
  */
 
 import _ from 'lodash';

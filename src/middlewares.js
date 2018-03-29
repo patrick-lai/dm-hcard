@@ -3,6 +3,7 @@
  */
 
 require('dotenv').config({ silent: true });
+
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import mustacheExpress from 'mustache-express';
@@ -13,9 +14,10 @@ const { SESSION_SECRET } = process.env;
 
 if (!SESSION_SECRET) throw new Error('SESSION_SECRET is not in env');
 
+// Sets up our express middleware stack
 export const applyMiddleware = app => {
   if (!app) throw new Error('Cannot apply middleware to empty app');
-  // Use a template engine (NOTE - auto does template caching)
+  // Use a template engine (NOTE - automatically does template caching)
   app.engine('mustache', mustacheExpress());
   app.set('view engine', 'mustache');
   app.use(bodyParser.json());

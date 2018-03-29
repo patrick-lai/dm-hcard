@@ -3,6 +3,7 @@
  */
 
 require('dotenv').config({ silent: true });
+
 import _ from 'lodash';
 import fs from 'fs';
 import React from 'react';
@@ -23,7 +24,7 @@ global.ExpressError = ExpressError;
 
 // Default to 8080
 const { PORT = 8080 } = process.env;
-// NOTE - The UI doesnt seem to post withCredentials... the spec is unclear if this is session based
+// NOTE - The UI doesnt seem to post withCredentials... the spec is unclear if this is intended to be session based
 const STATIC_SESSION_ID = 'xi120rhjt129r1';
 
 // Cache the Hcard
@@ -33,7 +34,7 @@ const app = express();
 // Apply middlewares
 applyMiddleware(app);
 
-// Serves mina.js, css and img assets
+// Serves main.js, css and img assets
 app.use('/', express.static('assets'));
 
 app.post('/update', validations.update, async (req, res) => {
