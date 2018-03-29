@@ -49,4 +49,5 @@ total = 4 hours
 
 ### Notes
 
-It seems like the fetch in the `main.js` does not use `withCredentials` so I am unable to make saving the payload session based...
+* It seems like the fetch in the `main.js` does not use `withCredentials` so I am unable to make saving the payload session based...
+* In production we will probably build a dist instead of using `babel-node` but I think for the purpose of the exercise lets just leave it.
