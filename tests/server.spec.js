@@ -62,6 +62,13 @@ describe('Hcard server', () => {
     done();
   });
 
+  it('Should not be able to update a bad payload', async done => {
+    // Update email
+    const res = await session.post('/update').send(['bad']);
+    expect(res.status).toBe(403);
+    done();
+  });
+
   it('Should be able to submit and persist data on reload', async done => {
     const params = 'givenName=Patrick';
     const res = await session.get('?' + params);
@@ -87,6 +94,13 @@ describe('Hcard server', () => {
     });
     const res3 = await session.get('/');
     expect(res3.text).toMatchSnapshot();
+    done();
+  });
+
+  it('Should not be able to submit a bad payload', async done => {
+    // Update email
+    const res = await session.post('/submit').send(['bad']);
+    expect(res.status).toBe(403);
     done();
   });
 });

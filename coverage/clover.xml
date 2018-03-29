@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1522333223685" clover="3.2.0">
+  <project timestamp="1522333223685" name="All files">
+    <metrics statements="62" coveredstatements="55" conditionals="583" coveredconditionals="232" methods="186" coveredmethods="134" elements="831" coveredelements="421" complexity="0" loc="62" ncloc="62" packages="3" files="7" classes="7">
+      <package name="assets">
+        <metrics statements="1" coveredstatements="1" conditionals="560" coveredconditionals="217" methods="174" coveredmethods="123"/>
+        <file name="main.js" path="/Users/patricklai/work/dm-hcard/assets/main.js">
+          <metrics statements="1" coveredstatements="1" conditionals="560" coveredconditionals="217" methods="174" coveredmethods="123"/>
+          <line num="1" count="80" type="cond" truecount="217" falsecount="343"/>
+        </file>
+      </package>
+      <package name="src">
+        <metrics statements="57" coveredstatements="50" conditionals="19" coveredconditionals="12" methods="9" coveredmethods="8"/>
+        <file name="_ExpressError.js" path="/Users/patricklai/work/dm-hcard/src/_ExpressError.js">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/patricklai/work/dm-hcard/src/index.js">
+          <metrics statements="26" coveredstatements="20" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="3"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="25" count="1" type="cond" truecount="0" falsecount="1"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="40" count="4" type="stmt"/>
+          <line num="42" count="4" type="stmt"/>
+          <line num="43" count="4" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="59" count="1" type="stmt"/>
+          <line num="60" count="8" type="stmt"/>
+          <line num="62" count="8" type="stmt"/>
+          <line num="64" count="8" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="74" count="1" type="stmt"/>
+          <line num="77" count="1" type="stmt"/>
+        </file>
+        <file name="logger.js" path="/Users/patricklai/work/dm-hcard/src/logger.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+        <file name="middlewares.js" path="/Users/patricklai/work/dm-hcard/src/middlewares.js">
+          <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="4" methods="2" coveredmethods="2"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="36" count="2" type="stmt"/>
+          <line num="37" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="41" count="2" type="stmt"/>
+        </file>
+        <file name="validations.js" path="/Users/patricklai/work/dm-hcard/src/validations.js">
+          <metrics statements="12" coveredstatements="11" conditionals="8" coveredconditionals="7" methods="2" coveredmethods="2"/>
+          <line num="9" count="5" type="stmt"/>
+          <line num="10" count="5" type="cond" truecount="4" falsecount="0"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="17" count="4" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="cond" truecount="3" falsecount="1"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src._store">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <file name="index.js" path="/Users/patricklai/work/dm-hcard/src/_store/index.js">
+          <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+          <line num="12" count="18" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="7" type="stmt"/>
+          <line num="15" count="5" type="cond" truecount="1" falsecount="1"/>
+          <line num="16" count="5" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

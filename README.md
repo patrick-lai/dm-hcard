@@ -19,9 +19,9 @@
 **Step 1) brain storm the problem**
 
 * Server side rendering
-* Need a way to cancel requests/data base writing (submit should override, blur updates)
+* Need a way to cancel requests/data base writing (take latest request)
 * Have a way to remember session
-* Try to do the avatar image uploading too I guess (Wats the payload for the image???)
+* Try to do the avatar image uploading too I guess (seems like front end not hooked up)
 
 **Step 2) Design**
 
@@ -42,4 +42,11 @@
 
 * 1st Session ~ 1.5 hours
 * 2nd Session ~ 2 hours
-* 3rd Session ~ (fixing a problem with session not persisting)
+* 3rd Session ~ .5 hours (confused with UI not posting withCredentials for persisting data)
+* 4th Session ~ 1 hour
+
+total = 4 hours
+
+### Notes
+
+It seems like the fetch in the `main.js` does not use `withCredentials` so I am unable to make saving the payload session based...

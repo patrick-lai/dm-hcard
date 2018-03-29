@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/index.js",
-    "test": "PORT=9090 echo \"Error: no test specified\" && exit 1",
+    "test": "PORT=9090 jest --coverage",
     "watch": "nodemon -x 'npm run start'",
     "watch:test": "PORT=9090 jest --watch"
   },

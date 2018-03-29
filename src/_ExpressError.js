@@ -1,8 +1,8 @@
-/*istanbul ignore next*/
 /***
  *  An Express error so we can throw things with status codes more easily around the app
  */
 
+/*istanbul ignore next*/
 export default class ExpressError extends Error {
   constructor(message, status, data) {
     super(message);
